@@ -1,0 +1,68 @@
+<<!DOCTYPE html>
+<html>
+<head>
+ <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"><!--HOJA DE ESTILOS / CSS ThemeRoller -->
+        <link rel="stylesheet" href="jquery/tema-nuevo.min.css" />
+        <link rel="stylesheet" href="jquery/jquery.mobile.icons.min.css" />
+        <!--HOJA DE ESTILOS / CSS ELEMENTOS PROPIOS-->
+          <link rel="stylesheet" type="text/css" href="css/elementos.css">
+          <link rel="stylesheet" type="text/css" href="jquery/jquery.mobile.structure-1.4.5.min.css">
+  <title></title>
+</head>
+<body>
+<div data-role="page" id="NuevoJugador">
+            <div data-role="header">
+                <h1><font size="4" face="Verdana">Nuevo Jugador</font></h1>
+            </div>
+            <div data-role="main">
+                <div class="ui-content">
+                  <font color="BLACK"><p><b>CONTENIDO</b></p></font>
+                  <img id="perfil" src="./img/perfil.png" width="100px" height="100px">
+                </div>
+              <div data-role="main" class="ui-content" id="formulario">
+                      <div class="ui-field-contain">
+                          <label for="fnombre"><b>Nombre:</b></label>
+                          <input type="text" name="fnombre" id="fnombre" placeholder="Tu nombre..."> 
+
+                          <label for="fposicion"><b>Posición</b></label>
+                          <input type="text" name="fposicion" id="fposicion" placeholder="Tu posición...">
+
+                          <label for="ftelefono"><b>Telefono:</b></label>
+                          <input type="text" name="ftelefono" id="ftelefono" placeholder="Tu teléfono...">
+
+                          <label for="femail"><b>Email:</b></label>
+                          <input type="text" name="femail" id="femail" placeholder="Tu email...">
+
+                          <label for="fedad"><b>Edad:</b></label>
+                          <input type="text" name="fedad" id="fedad" placeholder="Tu edad...">
+
+                          <label for="fdorsal"><b>Dorsal:</b></label>
+                          <input type="text" name="fdorsal" id="fdorsal" placeholder="Tu dorsal...">
+
+                          <label for="fgoles"><b>Goles:</b></label>
+                          <input type="text" name="fgoles" id="fgoles" placeholder="Goles...">
+                      
+
+                          <label for="fasistencias"><b>Asistencias:</b></label>
+                          <input type="text" name="fasistencias" id="fasistencias" placeholder="Asistencias...">
+                          </div>
+              </div>
+
+                 <div data-role="footer">
+                    <h2><div class="altoFooter" id="guardar"><a href="Principal.html" data-ajax="false"><img src="img/guardar.png"  align="middle|top"/></h2></a>
+                 </div>
+        </div>
+
+        <!-- LIBRERIA jQuery  -->
+        <script type="text/javascript" src="jquery/jquery-1.11.3.min.js"></script>
+        <script src="jquery/jquery-1.11.3.min.js"></script>
+        <!-- LIBRERIA jQuery mobile  -->
+        <script type="text/javascript" src="jquery/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/guardar.js"></script>
+</body>
+</html>
+
+

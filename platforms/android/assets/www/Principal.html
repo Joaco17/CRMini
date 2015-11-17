@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <!--HOJA DE ESTILOS / CSS ThemeRoller -->
+        <link rel="stylesheet" href="jquery/tema-nuevo.min.css" />
+        <link rel="stylesheet" href="jquery/jquery.mobile.icons.min.css" />
+        <!--HOJA DE ESTILOS / CSS ELEMENTOS PROPIOS-->
+         <link rel="stylesheet" type="text/css" href="css/elementos.css">
+        <link rel="stylesheet" type="text/css" href="jquery/jquery.mobile.structure-1.4.5.min.css">
+  <title></title>
+</head>
+<body>
+  <div data-role="page" id="Principal">
+    <div data-role="header"> 
+      <h1><font size="5" face="Verdana">Jugadores</font></h1>
+    </div>
+    
+    <div data-role="main" class="ui-content" id="listaJugadores">
+        <ul data-role="listview" data-inset="true">
+
+        </ul>
+    </div>
+  
+  <!--
+        <ul data-role="listview" data-inset="true" >
+        <li><a href="Jugadores/Joaquin.html"><img src="img/profile1.png"/>Joaquin Bahamonde<br>Delantero</a></li>
+        <li><a href="Jugadores/Ivan.html"><img src="img/profile1.png"/>Ivan Estruch<br>Extremo</a></li>
+        <li><a href="Jugadores/Jose.html"><img src="img/profile1.png"/>Jose Igualada<br>Medio-Centro</a></li>                  
+        <li><a href="Jugadores/Fran.html"><img src="img/profile1.png"/>Fran Primo<br>Extremo</a></li>    
+        <li><a href="Jugadores/David.html"><img src="img/profile1.png"/>David Alos<br>Defensa</a></li>
+        <li><a href="Jugadores/Nico.html"><img src="img/profile1.png"/>Nico Pons<br>Defensa</a></li> 
+        <li><a href="Jugadores/Alvaro.html"><img src="img/profile1.png"/>Alvaro Banyo<br>Portero</a></li>
+       </ul></font>
+      </div>
+       
+      </div>-->
+    <div data-role="footer">
+      <h2><div class="altoFooter"><a href="NuevoJugador.html" data-ajax="false"><img src="img/altausuarios.png" align="middle|top"/></a></div></h2>
+    </div>
+  </div>
+       <!-- LIBRERIA jQuery  -->
+        <script type="text/javascript" src="jquery/jquery-1.11.3.min.js"></script>
+        <script src="jquery/jquery-1.11.3.min.js"></script>
+        <!-- LIBRERIA jQuery mobile  -->
+        <script type="text/javascript" src="jquery/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        
+        <script type="text/javascript">cargarDB.initialize();</script>
+</body>
+</html>
+
