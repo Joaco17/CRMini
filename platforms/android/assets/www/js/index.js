@@ -19,69 +19,7 @@
 
 
 
-var cargarDB = {
-db:"",
 
-    initialize: function(){
-     //Enlazamos con la base de datos
-        this.db= window.openDatabase("jugadores", "1.0","Base de datos SQL",2*1024*1024);
-        this.cargaDetalles();
-    },
-
-    cargaDetalles: function(){
-        console.log("CARGAMOS DETALLES");
-        //Metodo transaction
-        this.db.transaction(this.mostrarDetalles, this.mostrarDetallesError);
-    },
-
-    mostrarDetalles: function(tx){
-        var sql = "SELECT * FROM jugadores;";
-        console.log("Lanzamos la consulta");
-        tx.executeSql(
-            sql,
-            [],
-            function(tx,result){
-                console.log("Se ha lanzado la consulta con exito");
-                if(result.rows.length>0){
-                    for(i=0;i<result.rows.length;i++){
-                        var fila=result.rows.item(i);
-                        //METEMOS LOS DATOS RELACIONANDO CON EL HTML(JQUERY)
-                        $("#listaJugadores ul").append("<li id='jug"+i+"'><a href='JugadorDetalles.html' data-ajax='false'><img src='img/profile1.png'/>"+fila.nombre+"<br><br>"+fila.posicion+"</a></li>").listview('refresh');
-                        /*console.log("Fila "+i+" Nombre: "+fila.nombre);
-                        console.log("Fila "+i+" Posicion: "+fila.posicion);
-                        console.log("Fila "+i+" Dorsal: "+fila.dorsal);
-                        console.log("Fila "+i+" Goles: "+fila.goles);
-                        /* var li = document.getElementsByTagName("li");
-                         console.log("hemos capturado los elementos list");
-
-                            for(var i = 0;i<li.length;i++){
-                                li[i].addEventListener("click", this.myScript);
-                                console.log("hemos llamado a la funcion myScript"+i);
-                            }*/
-
-
-                    }
-                }
-            },
-            function(tx,error){
-                this.mostrarDetallesError(error);
-            }
-
-            );
-
-
-    },
-
-    myScript: function(e){
-         alert(e.target.attributes.id.value);       
-    },
-
-    mostrarDetallesError: function(err){
-        console.log("ERROR AL CARGAR LA BBDD"+err.code);
-        console.log("Mensaje de error"+ err.message);
-    }
- 
-};
 
 var confDB = {
    //Variable de comprobacion existencia bd

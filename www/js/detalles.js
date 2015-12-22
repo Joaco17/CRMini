@@ -24,6 +24,7 @@ cargaDetalles: function(){
                 if(result.rows.length>0){
                     for(i=0;i<result.rows.length;i++){
                         var fila=result.rows.item(i);
+
                         //METEMOS LOS DATOS RELACIONANDO CON EL HTML(JQUERY)
                         $("#detalles ul").append("<li><img src='img/profile1.png' class='imagen'/>"+
                           "<div class='nombre'><strong>"+fila.nombre+"</strong></div><br>"+
@@ -60,5 +61,8 @@ cargaDetalles: function(){
         console.log("Mensaje de error"+ err.message);
     }
 
+   
+
+     
 
 };

@@ -9,9 +9,6 @@ var asistencias="";
 var db="";
 
 
-    
-   
-
     function insertarDatos(tx){
      //Enlazamos con la base de datos
         var sql ="INSERT INTO jugadores(nombre,edad,dorsal,posicion,email,telefono,goles,asistencias)"+
@@ -40,8 +37,8 @@ var db="";
 
 
         //conexion con bbdd
-        db=window.openDatabase("jugadores", "1.0","Base de datos SQL",2*1024*1024);
-        db.transaction(insertarDatos,mostrarGuardarError);
+        this.db=window.openDatabase("jugadores", "1.0","Base de datos SQL",2*1024*1024);
+        this.db.transaction(insertarDatos,mostrarGuardarError);
         console.log("HA INSERTADO DATOS");
        
     });
@@ -50,10 +47,11 @@ var db="";
     console.log("IMAGEN URI: "+imageURI);
 
     $("#perfil").attr("src", imageURI);
+    console.log(imageURI);
   };
 
   function errorImagen(message){
-    consoles.log("ERROR CON LA IMAGEN "+message);
+    console.log("ERROR CON LA IMAGEN "+message);
   };
 
   $("#perfil").click(function(event){
